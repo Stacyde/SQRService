@@ -9,9 +9,9 @@ public class sqrServiceTest {
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/bonus.csv")
 
-    public void shouldCalcExact(int expected, int x, int y) {
+    public void shouldCalcExact(int expected, int beginning, int end) {
         SQRService service = new SQRService();
-        int actual = service.calcSqrt(x, y);
+        int actual = service.calcSqrt(beginning, end);
         Assertions.assertEquals(expected, actual);
     }
 }
